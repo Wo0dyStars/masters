@@ -1,0 +1,11 @@
+Metric,1st Place,2nd Place,3rd Place,Gap (1st-3rd)
+Semantic Similarity,Agentic,Advanced,Naive,-0.004
+Faithfulness,Advanced,Agentic,Naive,-0.02
+Context Precision,Naive,Advanced,Agentic,-0.018
+Answer Correctness,Advanced,Agentic,Naive,-0.035
+Cost Efficiency,Naive,Advanced,Agentic,-0.014
+Speed,Naive,Agentic,Advanced,-11.688
+Token Efficiency,Naive,Advanced,Agentic,-774.925
+Semantic Similarity Consistency,Agentic,Naive,Advanced,0.003
+Faithfulness Consistency,Advanced,Agentic,Naive,0.045
+Context Precision Consistency,Advanced,Naive,Agentic,0.044

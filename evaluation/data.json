@@ -1,0 +1,302 @@
+[
+    {
+        "question": "What does the contract type tell you?",
+        "ground_truth": "Contract type serves as a business rule engine that automatically configures multiple operational aspects. Beyond simple categorization, it determines pricing logic, sets berth eligibility constraints, triggers specific billing cycles, and enables workflow automation like renewal processing. The type also influences reporting hierarchies and determines which charge templates apply, making it a foundational element for both revenue management and operational efficiency rather than just a descriptive label.",
+        "complexity": "Simple Factual"
+    },
+    {
+        "question": "What does the job status show?",
+        "ground_truth": "Job status functions as a workflow gate controller that determines system permissions and operational pathways. Beyond indicating current state, it governs UI action availability, controls billing eligibility, and triggers automated notifications. The status creates audit checkpoints that prevent financial errors\u2014only completed jobs generate charges, while cancelled jobs release reserved resources. Status transitions must reflect actual operational reality to maintain system integrity and prevent downstream workflow failures.",
+        "complexity": "Simple Factual"
+    },
+    {
+        "question": "What does the amount field on a transaction represent?",
+        "ground_truth": "The amount field serves as an immutable financial anchor that directly impacts customer relationships and regulatory compliance. Beyond monetary value, it establishes the mathematical foundation for balance calculations, aged debt analysis, and revenue recognition. Its post-finalisation immutability ensures audit trail integrity and prevents retrospective financial manipulation. The field's positive or negative nature determines cash flow direction and influences automated debt collection workflows.",
+        "complexity": "Simple Factual"
+    },
+    {
+        "question": "What does the length field of a berth indicate?",
+        "ground_truth": "Berth length operates as a critical safety constraint that prevents operational accidents and insurance liability. Beyond maximum accommodation measurement, it drives automated compatibility checking during contract allocation, influences pricing tier calculations, and supports capacity planning analytics. Inaccurate length data can result in dangerous vessel overhangs, blocked access routes, and invalidated insurance coverage. The field also enables revenue optimization by ensuring appropriate vessel-to-berth matching.",
+        "complexity": "Simple Factual"
+    },
+    {
+        "question": "What does the customer's preferred communication method control?",
+        "ground_truth": "Preferred communication method functions as a consent management system that protects legal compliance and customer relationships. Beyond channel selection, it governs automated workflow routing, ensures accessibility compliance, and prevents unwanted contact that could damage trust. The preference integrates with notification automation to respect customer boundaries while maintaining operational communication effectiveness. Incorrect settings can lead to missed critical communications or harassment complaints.",
+        "complexity": "Simple Factual"
+    },
+    {
+        "question": "What does a charge's status indicate?",
+        "ground_truth": "Charge status operates as a financial state machine that controls revenue recognition and audit compliance. Beyond lifecycle indication, it determines invoice eligibility, governs editability permissions, and ensures proper accounting treatment. Only finalised charges affect financial totals and trigger revenue calculations, while voided charges maintain audit trails without financial impact. The status prevents premature billing and supports error correction through reversals rather than data deletion.",
+        "complexity": "Simple Factual"
+    },
+    {
+        "question": "What does the draft value of a boat describe?",
+        "ground_truth": "Draft measurement functions as a navigational safety system that prevents grounding incidents and operational emergencies. Beyond vertical clearance indication, it drives berth allocation algorithms in tidal environments, informs lift planning calculations, and supports safe harbor navigation advice. Incorrect draft data can strand vessels at low tide, damage keels, or create rescue situations. The measurement also influences insurance risk assessments and operational scheduling decisions.",
+        "complexity": "Simple Factual"
+    },
+    {
+        "question": "What is the purpose of the tax rate field on a charge?",
+        "ground_truth": "Tax rate functions as a regulatory compliance mechanism that ensures legal conformity and accurate government reporting. Beyond percentage calculation, it determines invoice formatting, drives accounting categorization, and supports audit defense preparation. The field must align with local tax regulations and service classifications to prevent penalties and maintain business legitimacy. Different rates for various services enable complex tax scenarios while maintaining automated compliance.",
+        "complexity": "Simple Factual"
+    },
+    {
+        "question": "What does the berth status control?",
+        "ground_truth": "Berth status operates as a resource allocation gatekeeper that prevents operational conflicts and safety incidents. Beyond availability indication, it controls contract assignment eligibility, influences capacity reporting accuracy, and drives maintenance scheduling workflows. The status system prevents double-booking disasters, ensures maintenance safety protocols, and supports strategic capacity planning. Incorrect status management can lead to customer conflicts, safety violations, and revenue losses.",
+        "complexity": "Simple Factual"
+    },
+    {
+        "question": "What does the delivery status of a notification show?",
+        "ground_truth": "Delivery status functions as a communication audit system that ensures operational transparency and customer service accountability. Beyond successful transmission indication, it supports compliance reporting, enables failure diagnosis, and drives retry mechanisms. The status tracking prevents communication gaps that could lead to missed deadlines, customer complaints, or legal disputes. It also provides evidence for service level agreement compliance and customer support investigations.",
+        "complexity": "Simple Factual"
+    },
+    {
+        "question": "What is the status used to indicate a customer account is paused?",
+        "ground_truth": "The status 'Suspended' indicates a customer account is temporarily paused.",
+        "complexity": "Simple Factual"
+    },
+    {
+        "question": "Which attribute defines whether a meter is actively in use?",
+        "ground_truth": "The 'meter_status' attribute defines whether a meter is active or inactive.",
+        "complexity": "Simple Factual"
+    },
+    {
+        "question": "What is the meaning of 'job_type' in the job record?",
+        "ground_truth": "'Job_type' specifies the category of work being performed, such as lift-in, lift-out, or cleaning.",
+        "complexity": "Simple Factual"
+    },
+    {
+        "question": "Which status indicates a charge is finalised?",
+        "ground_truth": "A charge with status 'Finalised' means it has been locked and added to the customer's balance.",
+        "complexity": "Simple Factual"
+    },
+    {
+        "question": "What document lists the types of notification delivery status?",
+        "ground_truth": "The 'Notifications.md' document lists types of delivery statuses like Sent, Failed, and Deferred.",
+        "complexity": "Simple Factual"
+    },
+    {
+        "question": "Why should boats be linked to customers, contracts, and berths within the system?",
+        "ground_truth": "The boat serves as the operational nexus that connects financial, physical, and legal responsibilities. Customer linkage establishes accountability chains for billing disputes and insurance claims. Contract linkage enables automated validation of service entitlements and ensures dimensional compatibility prevents safety violations. Berth linkage supports spatial planning and prevents double-allocation conflicts. Without these connections, the system would require manual verification for every operation, creating opportunities for revenue leakage, safety incidents, and regulatory compliance failures. The relationships also enable predictive analytics for capacity planning and maintenance scheduling.",
+        "complexity": "Complex Reasoning"
+    },
+    {
+        "question": "Why is maintaining up-to-date berth status critical for operational planning?",
+        "ground_truth": "Berth status accuracy creates a foundation for operational safety and financial optimization that cascades through multiple business functions. Real-time status prevents catastrophic double-booking scenarios while enabling dynamic capacity optimization during peak periods. Incorrect status propagates through automated systems, potentially creating safety violations when boats are assigned to maintenance areas or financial losses from missed revenue opportunities. The status data drives strategic decisions about infrastructure investment, staffing requirements, and customer acquisition capacity, making accuracy essential for sustainable business growth.",
+        "complexity": "Complex Reasoning"
+    },
+    {
+        "question": "What are the implications of incorrectly configuring a customer's marketing opt-in setting?",
+        "ground_truth": "Marketing opt-in configuration functions as a legal compliance firewall that protects against regulatory penalties and reputation damage. Incorrect settings trigger GDPR violation cascades that can result in substantial fines and legal action. The configuration also creates customer experience paradoxes\u2014inappropriate exclusions reduce engagement and revenue opportunities, while unwanted communications destroy trust and trigger complaint cycles. The setting influences automated campaign systems, compliance reporting accuracy, and customer lifetime value calculations, making precision essential for sustainable marketing operations.",
+        "complexity": "Complex Reasoning"
+    },
+    {
+        "question": "Why should berth accessibility flags be reviewed before assigning boats?",
+        "ground_truth": "Accessibility flags function as operational safety protocols that prevent emergency situations and liability exposure. Beyond constraint indication, they protect vulnerable customers from unsafe access conditions and prevent vessel entrapment during tidal changes. Ignored flags can create rescue scenarios, insurance claim disputes, and customer injury liability. The flags also ensure compliance with accessibility regulations and support inclusive customer service that expands market reach while maintaining operational safety standards.",
+        "complexity": "Complex Reasoning"
+    },
+    {
+        "question": "What operational risks arise from unreturned or untracked access keys?",
+        "ground_truth": "Unreturned keys create security vulnerabilities that cascade through multiple risk categories, from theft and vandalism to insurance policy violations. The tracking failures compromise audit systems essential for incident investigation and regulatory compliance. Financial impacts extend beyond replacement costs to include security system upgrades and potential liability for unauthorized access incidents. Contract closure becomes impossible without key recovery, affecting berth availability and revenue recognition. The security breaches can invalidate insurance coverage precisely when claims are most likely to occur.",
+        "complexity": "Complex Reasoning"
+    },
+    {
+        "question": "How do meter reading methods impact billing accuracy and customer trust?",
+        "ground_truth": "Reading method selection creates a trust-accuracy trade-off matrix that influences customer relationships and operational efficiency. Automatic systems provide precision and transparency but require infrastructure investment and technical support capabilities. Manual methods introduce human error variables that compound over time, creating billing disputes and administrative overhead. Estimated readings create reconciliation complexities that can damage customer confidence and increase support costs. Consistent methodology choice ensures predictable billing cycles that customers can understand and budget for, while mixed approaches create confusion and erode system credibility.",
+        "complexity": "Complex Reasoning"
+    },
+    {
+        "question": "Why is it essential to assign a 'Job Type' and 'Priority' when creating service jobs?",
+        "ground_truth": "Job classification systems function as operational intelligence networks that optimize resource allocation and customer satisfaction. Type assignment enables skill-based routing that improves quality outcomes while supporting accurate billing through template selection. Priority levels create scheduling algorithms that balance urgent customer needs with operational efficiency, preventing both service failures and resource waste. Without proper classification, jobs enter routing chaos that leads to skill mismatches, billing errors, and customer dissatisfaction cycles that damage reputation and profitability.",
+        "complexity": "Complex Reasoning"
+    },
+    {
+        "question": "How do charge statuses affect invoice generation and revenue recognition?",
+        "ground_truth": "Charge status operates as a financial control system that maintains accounting integrity while enabling operational flexibility. The status hierarchy prevents premature revenue recognition that could distort financial reporting and create audit compliance issues. Draft statuses allow collaborative review processes that improve accuracy, while finalised charges trigger irreversible accounting treatments that support regulatory compliance. Status mismanagement creates reconciliation nightmares that delay billing cycles, distort revenue reporting, and complicate external auditing processes essential for business credibility.",
+        "complexity": "Complex Reasoning"
+    },
+    {
+        "question": "Why must boat ownership status be tracked in multi-owner scenarios?",
+        "ground_truth": "Ownership status tracking creates legal clarity that prevents disputes and ensures proper liability distribution in complex arrangements. The classification system determines communication routing, financial responsibility allocation, and access permission structures that protect all parties' interests. Incorrect tracking can trigger legal complications when disputes arise or emergency decisions require owner authorization. The system also supports taxation accuracy and insurance claim processing by clarifying legal relationships and financial obligations across multiple stakeholders.",
+        "complexity": "Complex Reasoning"
+    },
+    {
+        "question": "How does a customer's account status influence contract eligibility and operations?",
+        "ground_truth": "Account status functions as a business rule enforcement mechanism that protects financial interests while maintaining service quality. The status hierarchy creates automated decision trees that prevent revenue leakage from non-paying customers while preserving valuable relationships during temporary difficulties. Suspended accounts maintain data access for relationship recovery while blocking new financial commitments. The system supports graduated response strategies that balance debt collection effectiveness with customer retention, enabling sustainable business growth through risk management.",
+        "complexity": "Complex Reasoning"
+    },
+    {
+        "question": "What are the implications of finalising a charge before the corresponding booking has been completed?",
+        "ground_truth": "Finalising a charge before a booking is completed may lead to billing discrepancies and customer disputes. Operationally, the system should warn staff and either queue the charge or mark it as provisional. Financial reports must distinguish these early finalisations to ensure compliance and reconciliation accuracy.",
+        "complexity": "Complex Reasoning"
+    },
+    {
+        "question": "Compare how the notification system handles failed versus deferred message delivery statuses.",
+        "ground_truth": "Failed deliveries indicate a complete failure in transmission and require retries or alternate contact methods. Deferred deliveries are system-initiated delays often due to throttling or soft errors, and usually resolve automatically. Operational response differs significantly: failures require manual intervention, while deferred messages are typically monitored.",
+        "complexity": "Complex Reasoning"
+    },
+    {
+        "question": "Explain how berth availability and key access should be coordinated during a contract termination.",
+        "ground_truth": "When a contract is terminated, berth availability should immediately reflect the released status. Key access must be revoked simultaneously to prevent unauthorised use. Delays in either step create operational risk and can lead to compliance issues or overlapping allocations.",
+        "complexity": "Complex Reasoning"
+    },
+    {
+        "question": "What risks are involved in generating manual electricity readings without meter status validation?",
+        "ground_truth": "If manual readings are submitted without checking meter status, such as 'Inactive' or 'Faulty', billing errors can occur. This undermines trust in utility records and complicates audits. Validation ensures data quality and prevents incorrect charge generation.",
+        "complexity": "Complex Reasoning"
+    },
+    {
+        "question": "What complications can arise from reassigning a booking to a berth with an existing job schedule?",
+        "ground_truth": "Reassigning a booking to a berth with a job already scheduled can cause conflicts in operational planning, overlap in access control, and delay in job execution. The system must detect these overlaps and either warn the user or prevent reassignment without manual override.",
+        "complexity": "Complex Reasoning"
+    },
+    {
+        "question": "How does linking a contract to a boat and berth influence operational workflows?",
+        "ground_truth": "Contract-boat-berth linkage creates an operational validation network that prevents safety incidents while optimizing resource utilization. The dimensional compatibility checking prevents dangerous assignments that could damage vessels or infrastructure. Automated charge generation ensures revenue capture for all services while maintaining audit trails that support compliance and dispute resolution. The linkage enables predictive maintenance scheduling based on usage patterns and supports capacity planning through utilization analytics. These connections also trigger utility billing automation and movement scheduling that reduces administrative overhead while improving operational precision.",
+        "complexity": "Multi-document"
+    },
+    {
+        "question": "What happens when a job marked as chargeable is completed for a contract-linked boat?",
+        "ground_truth": "Job completion triggers an automated financial cascade that ensures revenue capture while maintaining comprehensive audit trails. The system generates charge records that inherit customer and contract context, preventing billing errors and supporting dispute resolution. Automated linking creates seamless workflows from operational work through financial processing, reducing administrative overhead while ensuring accuracy. The charge generation preserves detailed service descriptions and maintains connections across multiple system modules, enabling comprehensive reporting and supporting customer relationship management through transparent service history.",
+        "complexity": "Multi-document"
+    },
+    {
+        "question": "How is customer access to a berth controlled and tracked across the system?",
+        "ground_truth": "Access control creates a security accountability network that spans physical infrastructure and digital tracking systems. Key issuance links to customer profiles and contract terms, ensuring access rights align with service entitlements and payment status. The tracking system creates audit trails essential for security incident investigation and insurance claim support. Lost key procedures trigger automated charging workflows while maintaining security through access revocation. Berth reassignments cascade through access systems to maintain security perimeters while supporting operational flexibility.",
+        "complexity": "Multi-document"
+    },
+    {
+        "question": "What triggers an electricity charge and how is it tied to customer billing?",
+        "ground_truth": "Electricity charging creates an automated consumption-to-revenue pipeline that ensures accurate utility cost recovery while maintaining customer transparency. Meter reading triggers consumption calculations that apply contract-specific tariffs, supporting both standardized and customized pricing structures. The berth-contract linkage ensures charges are correctly attributed to responsible customers while maintaining audit trails for dispute resolution. Automated integration with billing cycles reduces administrative overhead while ensuring timely revenue recognition and customer communication about utility costs.",
+        "complexity": "Multi-document"
+    },
+    {
+        "question": "How do overdue contract-related charges appear in customer account summaries?",
+        "ground_truth": "Overdue charge management creates automated debt collection workflows that balance revenue protection with customer relationship preservation. Outstanding balance calculations aggregate across all contracts and services, providing comprehensive financial status that supports collection decisions. Automated reminder systems respect customer communication preferences while ensuring persistent follow-up that maximizes collection success. Credit hold mechanisms prevent additional financial exposure while maintaining service visibility that supports relationship recovery and payment negotiation processes.",
+        "complexity": "Multi-document"
+    },
+    {
+        "question": "How does a berth's availability affect the success of contract renewals?",
+        "ground_truth": "Berth availability creates a dependency chain that can cascade through multiple operational areas. When auto-renewal fails due to berth unavailability, it triggers manual allocation workflows that must consider not just dimensional compatibility, but also utility access requirements, customer preferences, and seasonal demand patterns. The process may require relocating existing boats or deferring maintenance schedules. Failed renewals can result in customer churn, revenue gaps, and administrative overhead. Success depends on proactive capacity management and maintaining buffer availability during peak renewal periods.",
+        "complexity": "Multi-document"
+    },
+    {
+        "question": "How is a cancelled job removed from financial reporting and workflows?",
+        "ground_truth": "Job cancellation triggers systematic workflow cleanup that prevents revenue leakage while maintaining audit compliance. Charge generation prevention ensures cancelled work doesn't create billing errors, while draft charge management supports error correction without data deletion. Resource reservation releases enable optimal capacity utilization and prevent scheduling conflicts. The cancellation maintains historical visibility for operational analysis while removing financial impacts that could distort revenue reporting and customer billing accuracy.",
+        "complexity": "Multi-document"
+    },
+    {
+        "question": "What sequence of modules is involved in processing a customer's lift-in booking?",
+        "ground_truth": "Lift-in processing creates an integrated workflow cascade that coordinates operational resources with financial accountability. Booking systems validate resource availability while linking customer, boat, and equipment requirements to prevent scheduling conflicts. Job creation triggers operational coordination with appropriate priority and skill assignments. Charge generation upon completion ensures service monetization while maintaining comprehensive audit trails from operational request through financial settlement. The module integration reduces administrative overhead while ensuring operational efficiency and revenue capture.",
+        "complexity": "Multi-document"
+    },
+    {
+        "question": "How does a lost access key affect customer account and billing status?",
+        "ground_truth": "Lost key management creates security and financial accountability workflows that protect assets while maintaining customer relationships. Key status changes trigger immediate access revocation to prevent unauthorized use, while replacement charge generation ensures cost recovery. The billing integration maintains payment accountability that can influence contract renewal eligibility. New key issuance creates updated access records that maintain security perimeters while restoring customer service access. The process balances security protection with operational continuity and customer satisfaction.",
+        "complexity": "Multi-document"
+    },
+    {
+        "question": "How does a scheduled job that overlaps with berth maintenance impact operations?",
+        "ground_truth": "Maintenance-job conflicts create operational safety scenarios that require systematic resolution to prevent accidents and service disruptions. Berth status changes should trigger automated conflict detection that alerts operational staff before dangerous situations develop. Resolution requires coordinating multiple systems\u2014job rescheduling, boat relocation, or maintenance deferrals\u2014while maintaining safety protocols and customer service commitments. The resolution process demands real-time communication across booking, berth management, and job scheduling systems to ensure operational integrity and safety compliance.",
+        "complexity": "Multi-document"
+    },
+    {
+        "question": "How should the system respond if a charge is disputed after a related movement booking has already occurred?",
+        "ground_truth": "The system should first log the dispute and flag the charge as 'under review'. It must then prevent auto-renewals, suspend financial triggers linked to the booking, and notify accounting. The booking remains valid, but downstream actions like contract generation should pause until the dispute is resolved.",
+        "complexity": "Multi-document"
+    },
+    {
+        "question": "What are the sequential steps if a contract is renewed for a customer whose key has not been returned?",
+        "ground_truth": "The system should check the key status during renewal. If the key is marked as unreturned, it must pause the renewal process and prompt for manual review. The system should optionally allow a conditional renewal with a flagged warning, and notify the customer to return or replace the key.",
+        "complexity": "Multi-document"
+    },
+    {
+        "question": "Describe how the system should behave when a lift-out booking is scheduled on a berth that is under inspection.",
+        "ground_truth": "Upon scheduling, the system must check for berth status. If under inspection, it should block the booking or queue it for staff approval. The customer should receive a notice, and operations must log the conflict. Upon manual override, the system must track exceptions for audit.",
+        "complexity": "Multi-document"
+    },
+    {
+        "question": "How should the system handle a job marked completed with an expired insurance policy on file?",
+        "ground_truth": "Completion should trigger an insurance validation step. If the policy is expired, the system should suspend job finalisation and generate a compliance warning. Charges may be withheld until the policy is updated, and customer access restricted. Manual override may apply with justification.",
+        "complexity": "Multi-document"
+    },
+    {
+        "question": "What actions must be taken if a customer submits a key return while a related job is still marked 'In Progress'?",
+        "ground_truth": "The key return must be queued and not processed until the job is completed or cancelled. The system should notify operations and tag the key return as 'Pending'. Only when the job reaches a final state should access and billing modules update the return status.",
+        "complexity": "Multi-document"
+    },
+    {
+        "question": "What statuses can a charge have?",
+        "ground_truth": "Charge statuses create a financial workflow control system that balances operational flexibility with accounting integrity. Draft status enables collaborative review and error correction before financial commitment. Finalised status triggers irreversible accounting treatment that supports regulatory compliance and audit requirements. Voided status maintains audit trails while preventing financial impact, supporting error correction without data manipulation. Reversed status creates offsetting entries that maintain historical accuracy while correcting financial errors through transparent accounting methods.",
+        "complexity": "Specific Details"
+    },
+    {
+        "question": "What are the four key statuses of a transaction?",
+        "ground_truth": "Transaction statuses create operational checkpoints that ensure financial accuracy while supporting customer service transparency. Pending status indicates processing uncertainty that affects cash flow planning and customer communication. Completed status confirms financial settlement that triggers accounting recognition and customer confirmation. Failed status indicates processing errors that require investigation and potential retry mechanisms. Cancelled status reflects intentional termination that releases financial commitments while maintaining audit trails for compliance and analysis.",
+        "complexity": "Specific Details"
+    },
+    {
+        "question": "What are the common statuses of a berth?",
+        "ground_truth": "Berth statuses create resource management controls that prevent operational conflicts while optimizing capacity utilization. Available status enables contract assignment and revenue generation. Occupied status prevents double-booking while supporting usage tracking. Reserved status holds capacity for confirmed future use while preventing unauthorized allocation. Maintenance status ensures safety by preventing assignments during infrastructure work. Inactive and Blocked statuses support operational flexibility during special circumstances while maintaining system integrity and capacity reporting accuracy.",
+        "complexity": "Specific Details"
+    },
+    {
+        "question": "What are the possible job statuses?",
+        "ground_truth": "Job statuses create workflow progression controls that optimize resource allocation while ensuring service quality. Draft enables collaborative planning before operational commitment. Scheduled coordinates resource allocation and customer expectations. In Progress indicates active work that affects resource availability and customer communication. On Hold preserves context during interruptions while maintaining workflow continuity. Completed triggers billing and customer notification processes. Cancelled releases resources while maintaining audit trails. Archived preserves historical data while removing operational clutter.",
+        "complexity": "Specific Details"
+    },
+    {
+        "question": "What priority levels exist for jobs?",
+        "ground_truth": "Job priorities create operational triage systems that balance customer needs with resource optimization. Low priority enables efficient scheduling during normal capacity periods. Normal priority supports standard service level expectations and workflow planning. High priority triggers expedited processing that may require resource reallocation. Critical priority demands immediate attention that can override normal scheduling constraints and resource allocation plans. The priority hierarchy enables automated scheduling algorithms while supporting manual override capabilities for exceptional circumstances.",
+        "complexity": "Specific Details"
+    },
+    {
+        "question": "What are the required fields to create a customer?",
+        "ground_truth": "Customer creation requirements establish data quality foundations that support operational efficiency and regulatory compliance. Identity fields ensure unique customer recognition across all system interactions. Contact information enables communication workflows essential for service delivery and relationship management. Address data supports geographic analysis, service eligibility determination, and regulatory compliance. Communication preferences ensure legal consent management and customer satisfaction. Classification fields enable automated workflow routing and pricing application. The requirements balance operational necessity with customer experience optimization.",
+        "complexity": "Specific Details"
+    },
+    {
+        "question": "What are the fields used to classify a key?",
+        "ground_truth": "Key classification creates security management frameworks that balance access control with operational efficiency. Key Type determines access scope and compatibility with security infrastructure. Key Code enables physical inventory management and audit trail correlation. Access Scope defines permission boundaries that align with customer entitlements and security policies. Key Status tracks lifecycle management essential for security and billing accountability. Time limitations support temporary access scenarios while maintaining security protocol compliance and customer service flexibility.",
+        "complexity": "Specific Details"
+    },
+    {
+        "question": "What predefined contract types exist?",
+        "ground_truth": "Contract types create service delivery frameworks that standardize operations while supporting customer variety. Annual Berthing enables long-term customer relationships with predictable revenue streams. Winter Storage supports seasonal customers with specialized service requirements. Dry Stack accommodates smaller vessels with space-efficient storage solutions. Long-Term Yard Storage serves extended maintenance and storage needs. Launch & Recovery supports transient customers with minimal infrastructure requirements. Custom contracts enable specialized arrangements while maintaining operational consistency and billing accuracy.",
+        "complexity": "Specific Details"
+    },
+    {
+        "question": "What are common booking types?",
+        "ground_truth": "Booking types create operational categorization systems that optimize resource allocation while ensuring service quality. Lift operations coordinate heavy equipment and skilled operators for vessel movement. Transport moves enable efficient vessel repositioning without water operations. Yard transfers optimize storage utilization and customer access. Jetwash services support vessel maintenance with specialized equipment. Launch and Recovery operations coordinate water access with equipment availability. Travel Hoist Operations manage complex vessel movements requiring specialized expertise and equipment coordination.",
+        "complexity": "Specific Details"
+    },
+    {
+        "question": "What are the valid reading methods for electricity meters?",
+        "ground_truth": "The four reading methods represent different reliability and accuracy trade-offs that impact billing precision and operational efficiency. Manual readings provide human verification but introduce timing inconsistencies and transcription errors that can damage customer relationships. Automatic readings ensure precision and consistent timing but require infrastructure investment and technical maintenance capabilities. Customer-provided readings reduce operational costs but need verification protocols to prevent billing disputes and maintain accuracy. Estimated readings serve as emergency fallbacks but create reconciliation requirements and potential customer dissatisfaction that must be managed carefully.",
+        "complexity": "Specific Details"
+    },
+    {
+        "question": "List all possible statuses for a contract.",
+        "ground_truth": "Possible contract statuses include: Draft, Active, Suspended, Cancelled, and Expired.",
+        "complexity": "Specific Details"
+    },
+    {
+        "question": "What are the valid types of transactions recorded in the system?",
+        "ground_truth": "Valid transaction types include Payment, Refund, Adjustment, and Charge.",
+        "complexity": "Specific Details"
+    },
+    {
+        "question": "Which meter statuses are available in the system?",
+        "ground_truth": "Meter statuses include: Active, Inactive, Faulty, and Removed.",
+        "complexity": "Specific Details"
+    },
+    {
+        "question": "List all booking statuses used in the system.",
+        "ground_truth": "Booking statuses include: Pending, Confirmed, Cancelled, In Progress, and Completed.",
+        "complexity": "Specific Details"
+    },
+    {
+        "question": "What key types can be issued to customers?",
+        "ground_truth": "Key types include: Main Gate, Berth Access, Utility Cabinet, and Workshop Key.",
+        "complexity": "Specific Details"
+    }
+]

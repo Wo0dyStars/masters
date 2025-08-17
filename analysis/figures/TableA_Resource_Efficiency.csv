@@ -1,0 +1,5 @@
+Paradigm,Avg Cost ($),Avg Latency (s),Avg Tokens,Perf/Cost,Perf/Token,Perf/Second,Sample Size
+Naive,0.0145,7.3,891.0,62.2,0.00101,0.1235,120
+Advanced,0.0155,19.0,952.0,57.9,0.000946,0.0474,120
+Agentic,0.0281,13.5,1666.0,32.1,0.000543,0.0671,120
+Overall,0.0194,13.2,1169.0,46.5,0.000771,0.0681,360
